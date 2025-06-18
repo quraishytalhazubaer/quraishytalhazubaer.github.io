@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talha Zubaer Siddique Alquraishy - Modern Portfolio</title>
+    <title>Talha Zubaer Siddique Alquraishy - Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for icons -->
@@ -28,39 +28,109 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            /* Default to dark mode styles matching the provided image */
-            @apply bg-slate-950 text-slate-100;
-            transition: background-color 0.4s ease, color 0.4s ease;
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a; /* Tailwind's bg-slate-950 */
+        color: #f1f5f9; /* Tailwind's text-slate-100 */
+        transition: background-color 0.4s ease, color 0.4s ease;
         }
 
-        /* Light mode overrides when 'dark' class is removed from HTML */
         html:not(.dark) body {
-            @apply bg-slate-100 text-slate-800;
+        background-color: #f1f5f9; /* Tailwind's bg-slate-100 */
+        color: #1e293b; /* Tailwind's text-slate-800 */
         }
-        html:not(.dark) .text-slate-800 { @apply text-slate-800; }
-        html:not(.dark) .bg-slate-950 { @apply bg-white; } /* Footer to white in light mode */
-        html:not(.dark) .bg-slate-800 { @apply bg-white; } /* Header/card backgrounds to white */
-        html:not(.dark) .text-slate-100 { @apply text-slate-900; } /* Header/card titles */
-        html:not(.dark) .text-violet-500 { @apply text-violet-700; } /* Accent colors */
-        html:not(.dark) .bg-violet-600 { @apply bg-violet-700; } /* Button backgrounds */
-        html:not(.dark) .hover\:bg-violet-700:hover { @apply hover:bg-violet-800; }
-        html:not(.dark) .bg-violet-500 { @apply bg-violet-600; } /* Smaller button backgrounds */
-        html:not(.dark) .hover\:bg-violet-600:hover { @apply hover:bg-violet-700; }
-        html:not(.dark) .bg-slate-700 { @apply bg-slate-200; } /* Theme toggle */
-        html:not(.dark) .hover\:bg-slate-600:hover { @apply hover:bg-slate-300; }
-        html:not(.dark) .text-slate-300 { @apply text-slate-700; } /* General text */
-        html:not(.dark) .border-slate-700 { @apply border-slate-200; }
-        html:not(.dark) .shadow-xl { @apply shadow-lg; } /* Adjust shadow intensity */
-        html:not(.dark) .shadow-2xl { @apply shadow-xl; }
-        html:not(.dark) .shadow-3xl { @apply shadow-2xl; }
-        html:not(.dark) .shadow-slate-700\/40 { @apply shadow-slate-300/40; }
-        html:not(.dark) .shadow-slate-800\/40 { @apply shadow-slate-300/40; }
-        html:not(.dark) .shadow-violet-900\/40 { @apply shadow-violet-200/40; }
-        html:not(.dark) .shadow-inner { @apply shadow-md; }
-        html:not(.dark) .shadow-slate-800\/50 { @apply shadow-slate-200/50; }
-        html:not(.dark) .border-violet-500 { @apply border-violet-700; }
-        html:not(.dark) .border-slate-600 { @apply border-slate-300; }
+
+        html:not(.dark) .text-slate-800 {
+        color: #1e293b; /* slate-800 */
+        }
+
+        html:not(.dark) .bg-slate-950 {
+        background-color: #ffffff; /* change to white for light mode */
+        }
+
+        html:not(.dark) .bg-slate-800 {
+        background-color: #ffffff;
+        }
+
+        html:not(.dark) .text-slate-100 {
+        color: #111827; /* slate-900 */
+        }
+
+        html:not(.dark) .text-violet-500 {
+        color: #7c3aed; /* violet-700 */
+        }
+
+        html:not(.dark) .bg-violet-600 {
+        background-color: #6d28d9; /* violet-700 */
+        }
+
+        html:not(.dark) .hover\:bg-violet-700:hover {
+        background-color: #5b21b6; /* violet-800 */
+        }
+
+        html:not(.dark) .bg-violet-500 {
+        background-color: #7c3aed; /* violet-600 */
+        }
+
+        html:not(.dark) .hover\:bg-violet-600:hover {
+        background-color: #6d28d9; /* violet-700 */
+        }
+
+        html:not(.dark) .bg-slate-700 {
+        background-color: #e2e8f0; /* slate-200 */
+        }
+
+        html:not(.dark) .hover\:bg-slate-600:hover {
+        background-color: #cbd5e1; /* slate-300 */
+        }
+
+        html:not(.dark) .text-slate-300 {
+        color: #334155; /* slate-700 */
+        }
+
+        html:not(.dark) .border-slate-700 {
+        border-color: #e5e7eb; /* slate-200 */
+        }
+
+        html:not(.dark) .shadow-xl {
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); /* Tailwind shadow-lg */
+        }
+
+        html:not(.dark) .shadow-2xl {
+        box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); /* Tailwind shadow-xl */
+        }
+
+        html:not(.dark) .shadow-3xl {
+        box-shadow: 0 35px 60px -15px rgba(0,0,0,0.3); /* Custom deeper shadow */
+        }
+
+        html:not(.dark) .shadow-slate-700\/40 {
+        box-shadow: 0 10px 15px -3px rgba(203,213,225,0.4); /* slate-300 / 40% */
+        }
+
+        html:not(.dark) .shadow-slate-800\/40 {
+        box-shadow: 0 10px 15px -3px rgba(203,213,225,0.4); /* slate-300 / 40% */
+        }
+
+        html:not(.dark) .shadow-violet-900\/40 {
+        box-shadow: 0 10px 15px -3px rgba(ddd6fe, 0.4); /* violet-200 / 40% */
+        }
+
+        html:not(.dark) .shadow-inner {
+        box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* Tailwind shadow-md */
+        }
+
+        html:not(.dark) .shadow-slate-800\/50 {
+        box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 0 1px rgba(203,213,225,0.5);
+        }
+
+        html:not(.dark) .border-violet-500 {
+        border-color: #7c3aed; /* violet-700 */
+        }
+
+        html:not(.dark) .border-slate-600 {
+        border-color: #d1d5db; /* slate-300 */
+        }
+
 
         /* Custom gradient button for contact form */
         .gradient-button {
@@ -107,10 +177,10 @@
             position: absolute;
             font-family: monospace;
             font-size: clamp(0.75rem, 3vw, 2.5rem); /* Responsive font size */
-            color: rgba(255, 255, 255, 0.05); /* Very faint white */
+            color: #f0ea94ee; /* Very faint white */
             pointer-events: none; /* Make them unclickable */
             user-select: none; /* Prevent text selection */
-            z-index: -1; /* Behind content */
+            z-index: 2; /* Behind content */
         }
         .dark .hero-bg-code {
             color: rgba(255, 255, 255, 0.05); /* Same for dark mode */
@@ -331,7 +401,7 @@
         <div class="bg-slate-800 dark:bg-slate-800 p-10 rounded-3xl shadow-xl border border-slate-700 dark:border-slate-700 card-hover-effect max-w-3xl mx-auto text-center">
             <i class="fas fa-trophy text-violet-500 dark:text-violet-500 text-5xl mb-6"></i>
             <h3 class="text-3xl font-bold text-slate-100 dark:text-slate-100 mb-4">Clarion Call Math Olympiad 2024</h3>
-            <p class="text-slate-300 dark:text-slate-300 text-lg leading-relaxed"> Led coordination  with 27 schools, managed a team of 100+ volunteers.  Organized venue , sponsorships, and VIP guest experience.</p>
+            <p class="text-slate-300 dark:text-slate-300 text-lg leading-relaxed"> Led coordination with 27 schools, managed a team of 100+ volunteers.  Organized venue , sponsorships, and VIP guest experience.</p>
         </div>
     </section>
 
@@ -363,7 +433,7 @@
                     DO YOU HAVE A PROJECT TO DISCUSS?
                 </h2>
                 <p class="text-4xl font-semibold text-slate-100 mb-10">
-                    GET IN TOUCH <i class="fas fa-comment-dots text-4xl ml-4"></i>
+                    GET IN TOUCH <i class="fas fa-comment-dots" style="font-size: 2rem; margin-left: 0.5rem;"></i>
                 </p>
 
                 <div class="mb-10">
